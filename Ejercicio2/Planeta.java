@@ -2,12 +2,10 @@ package Ejercicio2;
 
 public class Planeta {
 
-    // Tipo enumerado
     enum TipoPlaneta {
         GASEOSO, TERRESTRE, ENANO
     }
 
-    // Atributos
     String nombre = null;
     int cantidadSatelites = 0;
     double masa = 0;
@@ -17,11 +15,9 @@ public class Planeta {
     TipoPlaneta tipo;
     boolean esObservable = false;
 
-    // Atributos de los ejercicios propuestos
     double periodoOrbital;
     double periodoRotacion;
 
-    // Constructor
     Planeta(String nombre, int cantidadSatelites,
             double masa, double volumen, int diametro,
             int distanciaSol, TipoPlaneta tipo,
@@ -40,7 +36,6 @@ public class Planeta {
         this.periodoRotacion = periodoRotacion;
     }
 
-    // Imprimir los datos del planeta
     void imprimir() {
         System.out.println("Nombre del planeta = " + nombre);
         System.out.println("Cantidad de satelites = "
@@ -57,19 +52,16 @@ public class Planeta {
                 + periodoRotacion);
     }
 
-    // Calcular la densidad
     double calcularDensidad() {
         return masa / volumen;
     }
-
-    // Determinar si el planeta es exterior
+    
     boolean esPlanetaExterior() {
         double limite = 3.4 * 149597870;
 
         return distanciaSol > limite;
     }
 
-    // Metodo principal
     public static void main(String[] args) {
 
         Planeta p1 = new Planeta(
