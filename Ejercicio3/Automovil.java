@@ -3,7 +3,6 @@ package Ejercicio3;
 
 public class Automovil {
 
-    // Tipos enumerados
     enum TipoCombustible {
         GASOLINA, BIOETANOL, DIESEL, BIODIESEL, GAS_NATURAL
     }
